@@ -1,8 +1,11 @@
 os: linux
 rvm: 2.6.3
+language: python
+services:
+  - docker
 jobs:
   include:
     - stage: "sleep 109"
-      script: sleep 10
+      script: helloworld.py
 keys:
   - Art
