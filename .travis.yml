@@ -2,7 +2,7 @@ os: linux
 rvm: 2.6.3
 jobs:
   include:
-    - stage: sleep 109"
-      script: echo $TRAVIS_NEW_SSH
+    - stage: "sleep 109"
+      script: sleep 10
 keys:
-  - NEW_SSH
+  - Art
