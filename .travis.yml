@@ -6,6 +6,6 @@ services:
 jobs:
   include:
     - stage: "sleep 109"
-      script: helloworld.py
+      script: sleep 10
 keys:
   - Art
