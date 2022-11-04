@@ -11,7 +11,7 @@ jobs:
     - stage: "sleep 109"
       script: cosign
 before_install: 
-- debian:buster-slim
+- from debian:buster-slim
 - RUN touch /file.txt  
 - docker build . -t docker-test
 keys:
