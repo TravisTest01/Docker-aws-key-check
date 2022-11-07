@@ -4,4 +4,4 @@ group: edge
 language: python
 env: 
   - COSIGN_EXPERIMENTAL=1
-script: cosign
+script: cosign --key cosign.key
