@@ -4,11 +4,4 @@ group: edge
 language: python
 env: 
   - COSIGN_EXPERIMENTAL=1
-services:
-  - docker
-jobs:
-  include:
-    - stage: "sleep 109"
-      script: cosign
-keys:
-  - Art
+script: cosign
