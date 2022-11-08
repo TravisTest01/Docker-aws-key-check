@@ -9,6 +9,6 @@ services:
 jobs:
   include:
     - stage: "sleep 109"
-      script: cosign
+      script: docker build . -t docker-test
 keys:
   - Art
