@@ -1,8 +1,4 @@
-echo "Checking the COSING_PASSWORD value"
-echo "Value is: ${COSIGN_PASSWORD}"
-echo "---------------------------------"
-
-export COSIGN_PASSWORD="${COSIGN_PASSWORD}"
+export COSIGN_PASSWORD="C@S1GN#$&"
 
 # Sign the docker image
 cosign sign --key cosign.key arthanaharidas/python-hello-world
