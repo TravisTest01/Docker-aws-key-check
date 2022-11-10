@@ -1,3 +1,5 @@
+export COSIGN_PASSWORD="C@S1GN#$&"
+
 # Sign the docker image
 cosign sign --key cosign.key arthanaharidas/python-hello-world
 
