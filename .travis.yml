@@ -4,7 +4,6 @@ group: edge
 language: python
 env: 
   - COSIGN_EXPERIMENTAL=1
-  - COSIGN_PASSWORD="${COSIGN_PASSWORD}"
 services:
   - docker
 jobs:
