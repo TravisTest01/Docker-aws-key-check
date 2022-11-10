@@ -10,5 +10,6 @@ jobs:
   include:
     - stage: "sleep 109"
       script: docker build . -t docker-test
+      script: cosign sign --key Art docker-test:latest
 keys:
   - Art
