@@ -8,4 +8,4 @@ docker build -t hello-world-python .
 docker tag hello-world-python arthanaharidas/python-hello-world
 
 # Push the docker image
-docker push hello-world-python arthanaharidas/python-hello-world
+docker push arthanaharidas/python-hello-world
