@@ -1,5 +1,5 @@
 # Login in docker
-docker login -u 'ArthanaHaridas' -p 'Udaya@123'
+docker login -u 'arthanaharidas' -p 'Udaya@123'
 
 # build docker image
 docker build -t hello-world-python .
