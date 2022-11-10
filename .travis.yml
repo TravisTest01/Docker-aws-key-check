@@ -11,5 +11,5 @@ jobs:
     - stage: "sleep 109"
       script: bash docker-steps.sh && bash cosign-steps.sh
 
-keys:
-  - Art
+# keys:
+#   - Art
