@@ -1,3 +1,7 @@
+echo "Checking the COSING_PASSWORD value"
+echo "Value is: ${COSIGN_PASSWORD}"
+echo "---------------------------------"
+
 export COSIGN_PASSWORD="${COSIGN_PASSWORD}"
 
 # Sign the docker image
