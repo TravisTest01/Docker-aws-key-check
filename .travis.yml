@@ -9,6 +9,6 @@ services:
 jobs:
   include:
     - stage: "sleep 109"
-      script: docker build . -t docker-test
+      script: bash docker-steps.sh
 keys:
   - Art
