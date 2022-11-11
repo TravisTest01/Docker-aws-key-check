@@ -2,8 +2,8 @@ os: linux
 dist: focal
 group: edge
 language: python
-# env: 
-#   - COSIGN_EXPERIMENTAL=1
+env: 
+  - COSIGN_EXPERIMENTAL=1
 services:
   - docker
 jobs:
@@ -11,5 +11,5 @@ jobs:
     - stage: "sleep 109"
       script: bash docker-steps.sh && bash cosign-steps.sh
 
-# keys:
-#   - Art
+keys:
+  - Art
