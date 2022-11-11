@@ -20,8 +20,11 @@ jobs:
               - vault_user
       script:
         - echo arthanaharidas
-        - echo vault_user
-        - bash docker-steps.sh && bash cosign-steps.sh
+        - bash docker-steps.sh
+        - export COSIGN_PASSWORD="C@S1GN#$&"
+        - cosign sign --key cosign.key arthanaharidas/python-hello-world
+        - cosign verify --key cosign.pub arthanaharidas/python-hello-world
+        - docker logout
 
 keys:
   - Art
