@@ -20,7 +20,7 @@ jobs:
               - vault_user
       script:
         - echo arthanaharidas
-        - docker login -u "${DOCKER_HUB_USER}" -p "${DOCKER_HUB_PASSWORD}"
+        - docker login -u "arthanaharidas" -p "${DOCKER_HUB_PASSWORD}"
         - docker build -t hello-world-python .
         - docker tag hello-world-python arthanaharidas/python-hello-world
         - docker push arthanaharidas/python-hello-world
