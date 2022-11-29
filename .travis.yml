@@ -26,9 +26,8 @@ jobs:
         - docker push arthanaharidas/python-hello-world
         - export COSIGN_PASSWORD="${COS_PASSWORD}"
         - echo "${COSIGN_PASSWORD}"
-        - cosign sign --key cosign.key arthanaharidas/python-hello-world
-        - cosign verify --key cosign.pub arthanaharidas/python-hello-world
         - docker logout
+        - python hello_world.py
         
     - script:
       - echo arthanaharidas
@@ -41,6 +40,5 @@ jobs:
       - export COSIGN_PASSWORD="${COS_PASSWORD}"
       - echo "${COSIGN_PASSWORD}"
       - echo "${COS_PASSWORD}"
-      - cosign sign --key cosign.key arthanaharidas/python-hello-world
-      - cosign verify --key cosign.pub arthanaharidas/python-hello-world
       - docker logout
+      - python hello_world.py
