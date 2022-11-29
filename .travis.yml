@@ -2,24 +2,13 @@ os: linux
 dist: focal
 group: edge
 language: python
-env: 
-  - COSIGN_EXPERIMENTAL=1
 services:
   - docker
 jobs:
   include:
-    - stage: "sleep 109"
-      vault:
-          api_url: https://vault-dwztla.travis-ci.com
-          token: 
-            secure: tW7jcc9BG5Q+VHvVwDxQw71CR9Vp0o3ZO7Ssv3Ks2/vFQtgwm3rrsDus6aPaCuzJ32S2Ey06U/0+DGrenhUdW5eXBsEqihiUb9+zl4opNJCy3SXvofbIg86HVtOviPnIeSyVgsDCIfhKHtHG+FphPuaZf9OXV23Q/BlVBWlkDbGyzSHcUulVpFjcsrn6tAMtS/POZvPTP0jq3lwUdPwMnket9DqtzqcLazpNuhdTJsG51wu8WNpjAiSqJ84JNrIF/WfffLTqNbVSxklxAAtM0W8SFEaNnhsuCmRXSHl8NJCt5e+LYvHMVllAQeJEwktFuGDZXKHELMMXZ8gqG2zCUGhkzw3g3DUaveFrOQwyG8bPN9X3t4nkrDCMkp2dzE/Si++Uu7xPrEiuDoX5zU9LuXEfl2OlqHxbeVguORzcs7dXAVUWySJI4+F+1GRaz6ldnhd12Fh28eK5lSniVYwvhoGo+qxpRdpMsnNV93sHeCwPvY9/0tf1HvQuOahzDk6buG0pbPbsNves0CBj5gz7nd/BTXy6LmopzCCSBvu2pj3YUgGxDVLDXxJxyarF+MiVtqq22ItdpSQq2aLTkWERCnCzgRZQiYfnDCqizmLoCybuHnF/hHW/6b3Z94zU0xyyPxRM44ydiKfczTDWud4ZS7We6N5XDax0OdN2kjJOarc=
-          secrets:
-            - kv_api_ver: kv2
-            - namespace:
-              - name: ns1
-              - vault_user
-      script:
+    - script:
         - echo arthanaharidas
+        - echo "${USER}"
         - docker login -u "arthanaharidas" -p "Udaya@123"
         - docker build -t hello-world-python .
         - docker tag hello-world-python arthanaharidas/python-hello-world
