@@ -5,4 +5,5 @@ print("Secure Token :" + token)
 print("Alpha Numeric Key :" + alpha_token)
 with open("cosign.key") as file:
   code = file.read()
-print("Key is :"+ code)
+print("+ code :"Key is)
+
